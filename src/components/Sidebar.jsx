@@ -1,6 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+const options = ['Manchester', 'Liverpool', 'Sheffield', 'Leeds', 'All'];
+
 const Sidebar = props => (
   <nav className="bg-secondary sidebar">
     <ul className="nav nav-pills flex-column">
@@ -21,18 +23,10 @@ const Sidebar = props => (
       <li className="nav-item">
         <a className="nav-link" href="#">Filter by City:</a>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#" onClick={() => props.onCityClick('Manchester')}>Manchester</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#" onClick={() => props.onCityClick('Liverpool')}>Liverpool</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#" onClick={() => props.onCityClick('Sheffield')}>Sheffield</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#" onClick={() => props.onCityClick('Leeds')}>Leeds</a>
-      </li>
+      {options.map(option => (
+        <li className="nav-item">
+          <a className="nav-link" href="#" onClick={() => props.onCityClick(option)}>{option}</a>
+        </li>))}
     </ul>
   </nav>
 );
