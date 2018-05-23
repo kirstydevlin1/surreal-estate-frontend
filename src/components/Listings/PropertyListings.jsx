@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import Property from './Property';
 import './listings.scss';
 

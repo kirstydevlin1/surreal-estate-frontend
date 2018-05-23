@@ -2,7 +2,7 @@ import React from 'react';
 import { number, string } from 'prop-types';
 
 const Property = ({
-  title, type, bedrooms, bathrooms, price, city,
+  title, type, bedrooms, bathrooms, price, city, email,
 }) => (
   <div className="card" style={{ width: '18rem' }}>
     <img className="card-img-top" src="http://via.placeholder.com/350x150?text=Property+Image" alt="property" />
@@ -17,7 +17,7 @@ const Property = ({
       <li className="list-group-item">{city}</li>
     </ul>
     <div className="card-body">
-      <a href="mailto:someagent@estatecompany.co.uk" className="card-link">Email Agent</a>
+      <a href={`mailto:${email}`} className="card-link">Email Agent</a>
     </div>
   </div>
 );

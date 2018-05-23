@@ -24,7 +24,7 @@ const Sidebar = props => (
         <a className="nav-link" href="#">Filter by City:</a>
       </li>
       {options.map(option => (
-        <li className="nav-item">
+        <li className="nav-item" key={option}>
           <a className="nav-link" href="#" onClick={() => props.onCityClick(option)}>{option}</a>
         </li>))}
     </ul>
