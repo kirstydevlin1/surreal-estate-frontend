@@ -72,6 +72,15 @@ const AddProperty = () => (
           <button type="submit" className="btn btn-primary">Add Listing</button>
         </div>
       </div>
+      <div className="alert alert-warning" role="alert">
+        Some field validation went wrong. Please provide correct data.
+      </div>
+      <div className="alert alert-danger" role="alert">
+        Sorry, something went wrong. Please try again. (API Error)
+      </div>
+      <div className="alert alert-success" role="alert">
+        Property saved.
+      </div>
     </form>
   </div>
 );
